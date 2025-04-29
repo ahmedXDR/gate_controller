@@ -3,7 +3,7 @@ from fastapi import APIRouter
 from fastapi.concurrency import asynccontextmanager
 from serial import Serial
 
-from app.api.routes.deps import CurrentUser
+from app.api.deps import CurrentUser
 from app.schemas import Command
 from app.utils.arduino import init_arduino, send_command
 
