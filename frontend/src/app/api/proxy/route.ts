@@ -19,6 +19,7 @@ export async function GET(request: NextRequest) {
     const data = await response.json();
     return NextResponse.json(data);
   } catch (error) {
+    console.error('Proxy GET error:', error);
     return NextResponse.json({ error: 'Failed to proxy request' }, { status: 500 });
   }
 }
@@ -42,6 +43,7 @@ export async function POST(request: NextRequest) {
     const data = await response.json();
     return NextResponse.json(data);
   } catch (error) {
+    console.error('Proxy POST error:', error);
     return NextResponse.json({ error: 'Failed to proxy request' }, { status: 500 });
   }
 } 
