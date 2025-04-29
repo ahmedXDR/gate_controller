@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { apiUrl } from '@/config';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);

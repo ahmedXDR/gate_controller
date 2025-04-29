@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { apiUrl } from '@/config';
 
 export default function LoginPage() {
     const [username, setUsername] = useState('');
