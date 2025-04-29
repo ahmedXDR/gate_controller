@@ -19,7 +19,7 @@ export default function LoginPage() {
             const credentials = btoa(`${username}:${password}`);
 
             // Test the credentials using the login endpoint
-            const response = await fetch(apiUrl('/auth/login'), {
+            const response = await fetch(`/api/proxy?path=/auth/login`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Basic ${credentials}`

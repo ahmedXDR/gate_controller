@@ -29,7 +29,7 @@ export default function Home() {
     }
 
     try {
-      const response = await fetch(apiUrl('/gate/open'), {
+      const response = await fetch(`/api/proxy?path=/gate/open`, {
         method: 'GET',
         headers: {
           'Authorization': `Basic ${credentials}`
