@@ -2,6 +2,9 @@ import secrets
 import warnings
 from typing import Annotated, Any, Literal, Self
 
+from dotenv import load_dotenv
+
+
 from pydantic import (
     AnyUrl,
     BeforeValidator,
@@ -9,6 +12,8 @@ from pydantic import (
     model_validator,
 )
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
+load_dotenv(override=True)
 
 
 def parse_cors(v: Any) -> list[str] | str:
